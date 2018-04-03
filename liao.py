@@ -4,13 +4,13 @@
 
 class Student(object):
 
-    def __init(self, name, age):
+    def __init__(self, name, score):
         self.name = name
-        self.age = age
+        self.score = score
 
     pass
 
 
-if __name__ == "__main__":
-    bart = Student()
-    print(bart)
+if __name__ == '__main__':
+    bart = Student('shiwei', 24)
+    print(bart.name)
