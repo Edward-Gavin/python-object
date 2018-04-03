@@ -4,12 +4,34 @@
 
 class Student(object):
 
-    def __init__(self, name, score):
-        self.name = name
-        self.score = score
+    def __init__(self, name, gender, score):
+        """
+        设置私有（private）变量，只有内部可以访问，外部不可访问
+        :param name:
+        :param score:
 
-    def print_score(self):
-        print('{:d}'.format(self.score))
+        """
+        self.__gender = gender
+        self.__name = name
+        self.__score = score
+
+    def set_score(self, score):
+        self.__score = score
+
+    def set_name(self, name):
+        self.__name = name
+
+    def set_gender(self, gender):
+        self.__gender = gender
+
+    def get_score(self):
+        return self.__score
+
+    def get_name(self):
+        return self.__name
+
+    def get_gender(self):
+        return self.__gender
 
     def get_grade(self):
         if self.score >= 90:
